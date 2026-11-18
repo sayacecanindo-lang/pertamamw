@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Recruitment OSKASA Periode 2026/2027</h1>
+    <p class="subtitle">
+        FORMULIR PENDAFTARAN CALON AGGOTA OSKASA
+    </p>
+    <form action="http://rplcoders.com/proses.php" method="post">
+        <fieldset>
+            <legend>Data Pribadi</legend>
+            <label for="nama">Nama Lengkap :</label><br>
+            <input required type="text" name="nama" id="name" placeholder="ketikkan nama lengkap"><br>
+            <label for="tglahir">Tanggal Lahir :</label><br>
+            <input type="date" name="tglahir" id="tglahir"><br>
+            <label for="jk">Jenis Kelamin :</label><br>
+            <label style="cursor: pointer;" for ="jk1">
+                <input checked type="radio" name="jk" id="jk1" value="1">Laki-Laki
+             </label>
+             <label style="cursor: pointer;" for ="jk2">
+            <input type="radio" name="jk" id="jk2" value="2">Perempuan<br>
+            </label>
+            <label for="kelas">Kelas</label><br>
+            <select name="kelas" id="kelas">
+                <option value="xrpl1">X RPL 1</option>
+                <option value="xrpl2">X RPL 2</option>
+                <option value="xdpib1">X DPIB 1</option>
+                <option value="xdpib2">X DPIB 2</option>
+                <option value="xtkj1">X TKJ 1</option>
+                <option value="xtkj2">X TKJ 2</option>
+                <option value="xtkj3">X TKJ 3</option>
+                <option value="xtkkr1">X TKKR 1</option>
+                <option value="xtkkr2">X TKKR 2</option>
+                <option value="xulw">X ULW</option>
+                <option value="xpspt1">X PSPT 1</option>
+                <option value="xpspt2">X PSPT 2</option>
+                <option value="xdbp1"> X DPB 1</option>
+                <option value="xdpb2"> X DPB 2</option>
+                <option value="xanimnasi">X ANIMNASI</option>
+                <option value="xkriya">X KRIYA</option>
+                <option value="xdkv1">X DKV 1</option>
+                <option value="xdkv2">X DKV 2</option>
+            </select><br>
+            <label for="foto">Pas Foto </label><br>
+            <input 
+                type="file" 
+                name="foto"
+                id="foto"
+                    >
+            <label for="jabatan sebelumnya :">Jabatan sebelumnya :</label><br>
+            <select name="jabatan" id="jabatan">
+                <option value="ketua osis">Ketua Osis</option>
+                <option value="wakil ketua osis">Wakil Ketua Osis</option>
+                <option value="sekretaris">Sekretaris</option>
+                <option value="bendahara">Bendahara</option>
+                <option value="sekbid jasmani">Sekbid Jasmani</option>
+                <option value="sekbid berbangsa dan bernegara">Sekbid Berbangsa dan Bernegara</option>
+                <option value="sekbid osospol">Sekbid Osospol</option>
+                <option value="sekbid ketakwaan">Sekbi Ketakwaan</option>
+                <option value="sekbid kewirausahaan">Sekbid Kewirausahaan</option>
+                <option value="lainnya">Lainnya</option>
+                <option value="tidak ada">Tidak Ada</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>SEKSI BIDANG YANG BISA KALIAN PILIH :</legend>
+            <label for="ekskul">Pilihan sekbid ( bisa pilih lebih dari 1)</pilih>:</label><br>
+            <input type="checkbox" name="sekbid[]" id="sekbid1" value="Sekbid berbangsa dan bernegera">Sekbid Berbangsa dan Bernegara <br>
+            <input type="checkbox" name="sekbid[]" id="sekbid2" value="Sekbid kewirausahaan">Sekbid Kewirausahaan <br>
+            <input type="checkbox" name="sekbid[]" id="sekbid3" value="Sekbid ketakwaan dan budi pekerti">Sekbid Ketakwaan dan Budi & pekerti <br>
+            <input type="checkbox" name="sekbid[]" id="sekbid4" value="Sekbid kejasmani">Sekbid Kejasmani <br>
+            <input type="checkbox" name="sekbid[]" id="sekbid4" value="Sekbid osospol">Sekbid Osospol <br>
+            <input type="checkbox" name="sekbid[]" id="sekbid5" value="Sekbid apreasi seni">Sekbid Apresiasi Seni <br><br>
+            
+             <label for="alasan">Alasan kenapa memilih sekbid tersebut!! </label><br>
+            <textarea name="alasan" id="alasan" placeholder=" wajib diisi"></textarea><br>
+             <label for="motivasi">Motivasi anda di OMSKASA</label><br>
+             
+            <textarea name="motivasi" id="motivasi" placeholder="wajib diisi"></textarea>
+        </fieldset>
+        <label for="Password">password</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <button type="submit">Kirim</button><br><br>
+        <button onclick="return confirm('Apakah Anda yakin ?')" type="reset">Reset</button><br><br>
+        <label for="PERIODE 2026/2027">PERIODE 2026/2027</label>
+        
+</body>
+</html>

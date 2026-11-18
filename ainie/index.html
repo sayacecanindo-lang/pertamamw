@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musik Sederhana</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #456aa2 ;
+        }
+        button{
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor:pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #363067;
+            color: white;
+            transition: 0.3s;
+        }
+        button:hover{
+            background-color: #030b30;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Mainkan Nada Sederhana</h2>
+    <button id="playBtn">Mainkan Musik</button>
+
+    <script>
+        const button = document.getElemenById('playBtn');
+        let isPlaying = false;
+        let audioCtx;
+        let intervalId;
+
+        //melodi sederhana (frekuensi Hz)
+        const notes = [261.63, 293.66,329.63,249.23, 392.00, 440.00, 493.88,523.25];
+
+        function playNote(freq) {
+            if (!audioCtx){
+                audioCtx = new(window.AudioContext || window. webkitAudioContext)();
+            }
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueTime(freq, audioCtx.currentTime);
+
+            gain.gain.setValueTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.5);
+        }
+        
+        button.addEventListener('click', () => {
+            if(!isPlaying) {
+                isPlaying = true;
+                button.innerText = 'hentikkan musik';
+                let index = 0;
+
+                intervalId = setInterval(() => {
+          playNote(notes[index % notes.length]);
+          index++;
+        }, 300);
+      } else {
+        isPlaying = false;
+        button.innerText = 'Mainkan Musik';
+        clearInterval(intervalId);
+      }
+    });
+  </script>
+
+</body>
+</html>
+   

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <style>
+        table, th, td {
+            border: 1px solid powderblue;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+ 
+        table {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-siswa">
+        <thead>
+            <tr>
+                <th>ID siswa</th>
+                <th>Nama</th>
+                <th>Panggilan</th>
+                <th>Kelas</th>
+                <th>Jk</th>
+            </tr>
+        </thead>
+        <!-- tbody cukup dikosongkan karena akan diisi dari JSON -->
+        <tbody></tbody>
+    </table>    
+    
+    <script>
+        // ambil JSON dari server API
+        $.getJSON('https://api.rplcoders.com/siswa.php', function(data) {
+            // modifikasi tabel yang sudah disiapkan dengan 
+            // menyisipkan baris dari JSON
+            $('#data-siswa tbody').html(  
+                $.map(data.siswa, char =>
+                    `<tr><td>${char.id}</td>
+                    <td>${char.nama}</td>
+                    <td>${char.panggilan}</td>
+                    <td>${char.kelas}</td>
+                    <td>${char.jk}></td>
+                    </tr>`
+                ).join('')
+            );
+        });
+
+    </script>
+</body>
+</html

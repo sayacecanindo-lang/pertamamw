@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Bazar</title>
+</head>
+
+<body>
+    <h1>Pendaftaran Bazar</h1>
+    <p class="subtitle">
+        SILAHKAN ISI DATA DENGAN LENGKAP
+    </p>
+    <form action="http://rplcoders.com/proses.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Data Peserta</legend>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input required type="text" name="nama" id="nama" placeholder="Ketikkan nama anda">
+            <br><br>
+            <label for="telepon">No. Telepon:</label><br>
+            <input required type="tel" name="telepon" id="telepon" placeholder="08xxxxxxxxx">
+            <br><br>
+            <label for="tglahir">Tanggal Lahir:</label><br>
+            <input type="date" name="tglahir" id="tglahir">
+            <br><br>
+            <label>Jenis Kelamin:</label><br>
+            <label for="jk1">
+                <input type="radio" name="jk" id="jk1" value="1">Laki-Laki
+            </label>
+            <br>
+            <label for="jk2">
+                <input type="radio" name="jk" id="jk2" value="2">Perempuan
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Informasi Bazar</legend>
+            <label for="tema">Pilih Tema Bazar:</label>
+            <select name="tema" id="tema" required>
+                <option value="">-- Pilih Tema --</option>
+                <option value="teknologi">Teknologi</option>
+                <option value="tropical market">Tropical Market</option>
+                <option value="korean/japanese">Korean/Japanese</option>
+                <option value="tradisional modern">Tradisional Modern</option>
+                <option value="around the world">Around the World</option>
+            </select>
+            <br><br>
+            <label>Kategori Peserta:</label><br>
+            <input type="checkbox" name="kategori" value="pelajar">Pelajar
+            <input type="checkbox" name="kategori" value="mahasiswa">Mahasiswa
+            <input type="checkbox" name="kategori" value="umum"> Umum
+            <br><br>
+            <label>Sesi Event:</label><br>
+            <input  type="checkbox"  name="sesi"  value="pagi">Pagi
+            <input type="checkbox" name="sesi" value="siang"> Siang
+            <input type="checkbox" name="sesi" value="malam">Malam
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Informasi Tambahan</legend>
+            <label for="alamat">Alamat:</label><br>
+            <textarea  name="alamat"  id="alamat"  rows="4"  cols="40" required></textarea>
+            <br><br>
+            <label for="identitas">Upload Identitas:</label><br>
+            <input  type="file"  name="identitas"  id="identitas" accept=".jpg,.jpeg,.png,.pdf"  required>
+            <br><br>
+            <input type="checkbox" name="persetujuan" value="setuju" required>
+            Saya menyatakan data yang telah saya isi benar.
+        </fieldset>
+        <br>
+        <button type="submit">Daftar Sekarang</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

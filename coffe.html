@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Daftar Menu Coffe</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans serif;
+            background-color: #f3e5d0;
+            margin: 0;
+            padding: 30px;
+        }
+         .container { 
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.14);
+        }
+        h1 {
+            text-align: center;
+            color: #5d4037;
+            margin-bottom: 25px;
+        }
+         h1 {
+            text-align: center;
+            color: #5d4037;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4e342e;
+        }
+
+        input, select, textarea {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #bca89a;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #6d4c41;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <h1>Rene Daftar Menu Coffe</h1>
+    <p>Silahkan pilih coffe sesuai selera anda</p>
+    <from action="#" method="post">
+    <fieldset>
+        <legenda>Data Customer</legenda>
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="ketikkan nama anda disni" required>
+        <br>
+
+        <label for="telepon">No.Telepon</label>
+        <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxx">
+        
+        <label for="antrian">No.Antrian</label>
+        <input type="number" id="antrian" name="antrian" min="1" max="20" value="1" required>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legenda>Pilih Menu</legenda>
+        <label for="menu coffe">Menu Coffe:</label>
+        <select id="menu-coffe" name="menu-coffe" >required>
+            <option value="">--Pilih Menu--</option>
+            <option value="espresso">Espresso - Rp:12.000</option>
+            <option value="americano">Americano - Rp12.000</option>
+            <option value="palm gula aren">Palm Gula Aren - Rp15.000</option>
+            <option value="caramel banana">Caramel Banana - Rp16.000</option>
+            <option value="caramel machiatto">Caramel Macchiato - Rp17.000</option>
+        </select><br>
+
+        <label for="jumlah-coffe">Jumlah:</label>
+        <input type="number" id="jumlah-coffe" name="jumlah-coffe" min="1" max="25" value="1" required>
+        <label for="menu non coffe">Menu Non Coffe:</label>
+        <select id="menu-noncoffe" name="menu-coffe" >required>
+            <option value="">--Pilih Menu--</option>
+            <option value="chocolate">Chocolate - Rp13.000</option>
+            <option value="matcha latte">Matcha Latte - Rp15.000</option>
+            <option value="taro">Taro - Rp10.000</option>
+            <option value="choco oreo">Choco Oreo - Rp14.000</option>
+            <option value="milk rasberry">Milk Rasberry - Rp17.000</option>
+        </select><br>
+
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah-coffe" name="jumlah-coffe" min="1" max="25" value="1" required>
+    </fieldset>
+    <br>
+    <fieldset>
+    <legend>Jenis Pesanan</legend>
+
+    <div class="pilihan">
+
+        <label>
+            <input type="radio" name="jenis-pesanan"value="take-away" required>Take Away
+        </label>
+
+        <label>
+            <input type="radio" name="jenis-pesanan"value="di-tempat">Di Tempat
+        </label>
+    </div>
+    </fieldset>
+    <fieldset>
+            <legend>Ukuran</legend>
+            <div class="pilihan">
+                <label>
+                    <input type="radio"name="ukuran" value="small"required>Small
+                </label>
+                <label>
+                    <input type="radio" name="ukuran" value="medium">Medium
+                </label>
+                <label>
+                    <input type="radio" name="ukuran"value="large">Large
+                </label>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Tambahan</legend>
+            <div class="pilihan">
+                <label>
+                    <input type="checkbox" name="tambahan"value="extra-shot">Extra Shot (+Rp3.000)
+                </label>
+                <label>
+                    <input type="checkbox" name="tambahan"value="less-sugar">Less Sugar
+                </label>
+                <label>
+                    <input type="checkbox"name="tambahan"value="ice">Ice
+                </label>
+            </div>
+            <label for="catatan">Catatan Pesanan:
+            </label>
+             <textarea id="catatan" name="catatan"placeholder="Contoh: jangan terlalu manis"></textarea>
+             <div class="tombol">
+                <button type="submit">Mulai Pesan</button>
+                <button type="reset">Reset</button>
+            </div>
+             <p class="panutup">
+                    Terimakasih telah berkunjung di kedai kami. Semoga hari hari anda selalu diberkati
+                </p>
+</body>
+</html>
